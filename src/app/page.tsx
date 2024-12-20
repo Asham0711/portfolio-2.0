@@ -1,9 +1,23 @@
-import Image from "next/image";
+import About from '@/components/About'
+import Education from '@/components/Education'
+import Home from '@/components/Home'
+import Projects from '@/components/Projects'
+import Skills from '@/components/Skills'
+import React from 'react'
 
-export default function Home() {
+const page = () => {
   return (
     <div>
-      Hello
+      <Home />
+      <About />
+      <Skills />
+      <Projects />
+      <Education />
     </div>
-  );
+  )
 }
+
+export default page
+
+// project - animated testimonials
+// cardspotlight thinking

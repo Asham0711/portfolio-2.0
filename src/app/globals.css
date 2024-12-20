@@ -2,26 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-.dark {
-  /* Dark mode colors */
+/* Default (light mode) variables */
+:root {
+  --background: #F5EFFF;
+  --foreground: #171717;
+  --font-family: "Times New Roman", Times, serif;
+}
+
+/* Dark mode variables */
+:root.dark {
   --background: #121212;
   --foreground: #ffffff;
+  --font-family: "Times New Roman", Times, serif;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* Handle system preference */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
+  :root:not(.dark) {
+    --background: #121212;
     --foreground: #ededed;
   }
 }
 
+/* Apply the background, foreground colors, and font */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family);
 }
