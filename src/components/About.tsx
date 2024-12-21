@@ -18,7 +18,7 @@ const About = () => {
   return (
     <div id="about" className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-20">
       <h1 className="text-4xl text-center font-bold mb-2"><HighlightText text='About' /></h1>
-      <div className="border-2 border-[#e77bfa] w-[5%] mx-auto md:mb-20"></div>
+      <div className="border-2 border-[#e77bfa] w-[5%] mx-auto md:mb-20 mb-10"></div>
       <div className="flex flex-col gap-8 md:flex-row justify-between space-x-5 md:px-20">
         <div className="md:w-1/2 w-full px-20">
           <BackgroundGradient className='rounded-3xl'>

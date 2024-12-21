@@ -79,26 +79,25 @@ const Home = () => {
     ]
     return (
         <>
-        <div id='home' className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-28">
+        <div id='home' className="max-w-screen-2xl container mx-auto px-4 md:px-20 md:my-28">
             <Spotlight
-                className="left-0 md:left-60 md:top-56 top-0"
+                className="left-0 md:left-60 md:top-56 top-0 hidden md:block"
                 fill='#f136f4'
             />
             <div className='flex flex-col md:flex-row'>
-            {/* Left Side  */}
+                {/* Left Side  */}
                 <div className='md:w-[65%] mt-12 md:mt-24 space-y-2 order-2 md:order-1'>
                     <span className='text-xl font-bold'>Welcome in my feed</span>
                     <div className='flex text-2xl space-x-2 md:text-4xl'>
-                    <h1>Hello I am a</h1>
-                    <ReactTyped
-                        className="text-[#E88DEA] font-bold"
-                        strings={["Programmer", "Developer", "Coder"]}
-                        typeSpeed={40}
-                        backSpeed={50}
-                        loop={true}
-                    />
+                        <h1>Hello I am a</h1>
+                        <ReactTyped
+                            className="text-[#E88DEA] font-bold"
+                            strings={["Programmer", "Developer", "Coder"]}
+                            typeSpeed={40}
+                            backSpeed={50}
+                            loop={true}
+                        />
                     </div>
-                    <br />
                     <p className='text-lg text-justify'>
                         Hello, I am Asham, a passionate Full Stack Web developer with a keen eye for MERN
                         Stack and NextJs. With a background in IT, I strive to create impactful and
@@ -110,7 +109,7 @@ const Home = () => {
                     <div className='space-y-2'>
                         <h1 className="font-bold text-center text-lg">Available on</h1>
                         <FloatingDock
-                            mobileClassName="translate-y-20"
+                            mobileClassName="translate-y-2"
                             items={socialLinks}
                         />
                     </div>
@@ -126,7 +125,7 @@ const Home = () => {
                     </div>
                 </div>
                 {/* Right Side  */}
-                <div className="md:w-[35%] flex justify-center md:ml-28 md:mt-20 mt-8 order-1 bg-transparent">
+                <div className="md:w-[35%] flex justify-center md:ml-28 mt-20 order-1 bg-transparent">
                     <Image
                         src={pic}
                         className="md:w-[400px] md:h-[350px] md:hover:scale-125 transition-all duration-1000 cursor-pointer"

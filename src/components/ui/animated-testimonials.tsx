@@ -156,7 +156,7 @@ export const AnimatedTestimonials = ({
                 </motion.span>
               ))}
             </motion.p>
-            <div className="flex justify-between my-6">
+            <div className="flex justify-between mt-6">
               <button
                 onClick={() => navigateToLink(testimonials[active].liveLink)}
                 className="bg-gradient-to-r from-[#5F0FFF] via-[#A909FF] to-[#E88DEA] px-5 py-2 rounded-xl flex gap-2 justify-center items-center font-semibold text-white"
@@ -171,7 +171,7 @@ export const AnimatedTestimonials = ({
               </button>
             </div>
           </motion.div>
-          <div className="flex gap-4 pt-12 md:pt-0">
+          <div className="flex gap-4 pt-8">
             <button
               onClick={handlePrev}
               className="h-7 w-7 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center group/button"

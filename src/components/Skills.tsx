@@ -21,7 +21,7 @@ const Skills = () => {
   return (
     <div id="skills" className='max-w-screen-2xl container mx-auto px-6 md:px-20 my-20'>
         <h1 className='text-4xl text-center font-bold mb-2'><HighlightText text='Skills' /></h1>
-        <div className='border-2 border-[#e77bfa] w-[5%] mx-auto mb-20'></div>
+        <div className='border-2 border-[#e77bfa] w-[5%] mx-auto md:mb-20 mb-10'></div>
         <div className='grid grid-cols-1 gap-20 md:grid-cols-2'>
             {/* Languages  */}
             <div>
