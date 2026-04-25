@@ -10,12 +10,13 @@ import { ImLink } from "react-icons/im";
 import { LuRadioTower } from "react-icons/lu";
 
 type Testimonial = {
+  id: string;
   quote: string;
   name: string;
   designation: string;
   src: any;
-  github: string;  // Add github link
-  liveLink: string;  // Add live link
+  github: string;
+  liveLink: string;
 };
 
 export const AnimatedTestimonials = ({
@@ -46,8 +47,8 @@ export const AnimatedTestimonials = ({
     }
   }, [autoplay]);
 
-  const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10;
+  const getRotation = (index: number) => {
+    return ((index * 7) % 21) - 10;
   };
 
   // Function to handle navigation to Live Link or GitHub Link
@@ -63,18 +64,18 @@ export const AnimatedTestimonials = ({
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
-                  key={testimonial.src}
+                  key={testimonial.id}
                   initial={{
                     opacity: 0,
                     scale: 0.9,
                     z: -100,
-                    rotate: randomRotateY(),
+                    rotate: getRotation(index),
                   }}
                   animate={{
                     opacity: isActive(index) ? 1 : 0.7,
                     scale: isActive(index) ? 1 : 0.95,
                     z: isActive(index) ? 0 : -100,
-                    rotate: isActive(index) ? 0 : randomRotateY(),
+                    rotate: isActive(index) ? 0 : getRotation(index),
                     zIndex: isActive(index)
                       ? 999
                       : testimonials.length + 2 - index,
@@ -84,7 +85,7 @@ export const AnimatedTestimonials = ({
                     opacity: 0,
                     scale: 0.9,
                     z: 100,
-                    rotate: randomRotateY(),
+                    rotate: getRotation(index),
                   }}
                   transition={{
                     duration: 0.4,
