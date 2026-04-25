@@ -7,6 +7,7 @@ import { ReactTyped } from 'react-typed';
 import { Spotlight } from './ui/Spotlight';
 import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconBrandMongodb, IconBrandNextjs, IconBrandNodejs, IconBrandReact, IconBrandX } from '@tabler/icons-react';
 import { FloatingDock } from './ui/floating-dock';
+import InteractiveImage from './InteractiveImage';
 
 
 const Home = () => {
@@ -126,11 +127,12 @@ const Home = () => {
                 </div>
                 {/* Right Side  */}
                 <div className="md:w-[35%] flex justify-center md:ml-28 mt-20 order-1 bg-transparent">
-                    <Image
+                    {/* <Image
                         src={pic}
                         className="md:w-[400px] md:h-[350px] md:hover:scale-125 transition-all duration-1000 cursor-pointer"
                         alt=""
-                    />
+                    /> */}
+                    <InteractiveImage className="md:w-[400px] md:h-[350px]" />
                 </div>
             </div>
         </div>
