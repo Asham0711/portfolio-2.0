@@ -159,13 +159,17 @@ export const AnimatedTestimonials = ({
             </motion.p>
             <div className="flex justify-between mt-6">
               <button
-                onClick={() => navigateToLink(testimonials[active].liveLink)}
+                onClick={() =>
+                  window.open(testimonials[active].liveLink, "_blank")
+                }
                 className="bg-gradient-to-r from-brand-300 via-brand-200 to-brand-100 px-5 py-2 rounded-xl flex gap-2 justify-center items-center font-semibold"
               >
                 Live Link <LuRadioTower className="font-bold" />
               </button>
               <button
-                onClick={() => navigateToLink(testimonials[active].github)}
+                onClick={() =>
+                  window.open(testimonials[active].github, "_blank")
+                }
                 className="bg-gradient-to-r from-brand-300 via-brand-200 to-brand-100 px-5 py-2 rounded-xl flex gap-2 justify-center items-center font-semibold"
               >
                 Github <ImLink className="font-bold" />
