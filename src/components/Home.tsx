@@ -94,7 +94,7 @@ const Home = () => {
       >
         <Spotlight
           className="left-0 md:left-60 md:top-56 top-0 hidden md:block"
-          fill="#f136f4"
+          fill="#2193b0"
         />
         <div className="flex flex-col md:flex-row">
           {/* Left Side  */}
@@ -103,7 +103,7 @@ const Home = () => {
             <div className="flex text-2xl space-x-2 md:text-4xl">
               <h1>Hello I am a</h1>
               <ReactTyped
-                className="text-[#E88DEA] font-bold"
+                className="text-brand-300 font-bold"
                 strings={["Programmer", "Developer", "Coder"]}
                 typeSpeed={40}
                 backSpeed={50}
@@ -141,11 +141,6 @@ const Home = () => {
           </div>
           {/* Right Side  */}
           <div className="md:w-[35%] flex justify-center md:ml-28 mt-20 order-1 bg-transparent">
-            {/* <Image
-                        src={pic}
-                        className="md:w-[400px] md:h-[350px] md:hover:scale-125 transition-all duration-1000 cursor-pointer"
-                        alt=""
-                    /> */}
             <InteractiveImage className="md:w-[400px] md:h-[350px]" />
           </div>
         </div>

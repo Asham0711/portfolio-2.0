@@ -1,3 +1,9 @@
+import project1 from '@/assests/ashcode.jpg'
+import project2 from '@/assests/ashchat.jpg'
+import project3 from '@/assests/anonymous.png'
+import project4 from '@/assests/music.png'
+import project5 from '@/assests/slip.png'
+
 export const navLink = [
     { title: 'Home', path: '/#home' },
     { title: 'About', path: '/#about' },
@@ -7,12 +13,6 @@ export const navLink = [
     { title: 'Contact', path: '/#contact' },
 ];
 
-
-import project1 from '@/assests/ashcode.jpg'
-import project2 from '@/assests/ashchat.jpg'
-import project3 from '@/assests/anonymous.png'
-import project4 from '@/assests/music.png'
-import project5 from '@/assests/slip.png'
 export const testimonials = [
     {
       id: "proj-1",

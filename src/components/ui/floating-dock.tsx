@@ -32,7 +32,6 @@ export const FloatingDock = ({
   );
 };
 
-
 const FloatingDockDesktop = ({
   items,
   className,
@@ -46,8 +45,8 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto flex h-16 gap-4 items-end  rounded-2xl bg-[#f4ccf5] dark:bg-neutral-900 px-4 pb-3",
-        className
+        "mx-auto flex h-16 gap-4 items-end  rounded-2xl bg-brand-200 dark:bg-neutral-900 px-4 pb-3",
+        className,
       )}
     >
       {items.map((item) => (
@@ -83,7 +82,7 @@ function IconContainer({
   let heightTransformIcon = useTransform(
     distance,
     [-150, 0, 150],
-    [20, 40, 20]
+    [20, 40, 20],
   );
 
   let width = useSpring(widthTransform, {

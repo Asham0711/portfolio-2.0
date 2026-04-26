@@ -160,15 +160,15 @@ export const AnimatedTestimonials = ({
             <div className="flex justify-between mt-6">
               <button
                 onClick={() => navigateToLink(testimonials[active].liveLink)}
-                className="bg-gradient-to-r from-[#5F0FFF] via-[#A909FF] to-[#E88DEA] px-5 py-2 rounded-xl flex gap-2 justify-center items-center font-semibold text-white"
+                className="bg-gradient-to-r from-brand-300 via-brand-200 to-brand-100 px-5 py-2 rounded-xl flex gap-2 justify-center items-center font-semibold"
               >
-                Live Link <LuRadioTower className='font-bold'/>
+                Live Link <LuRadioTower className="font-bold" />
               </button>
               <button
                 onClick={() => navigateToLink(testimonials[active].github)}
-                className="bg-gradient-to-r from-[#5F0FFF] via-[#A909FF] to-[#E88DEA] px-5 py-2 rounded-xl flex gap-2 justify-center items-center font-semibold text-white"
+                className="bg-gradient-to-r from-brand-300 via-brand-200 to-brand-100 px-5 py-2 rounded-xl flex gap-2 justify-center items-center font-semibold"
               >
-                Github <ImLink className='font-bold'/>
+                Github <ImLink className="font-bold" />
               </button>
             </div>
           </motion.div>

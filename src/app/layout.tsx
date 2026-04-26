@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Asham Imad | Full Stack Developer",
-  description: "Portfolio of Asham Imad - MERN Stack & Next.js Developer",
+  title: "Md Asham Imad",
+  description: "Portfolio of Md Asham Imad - MERN Stack & Next.js Developer",
   keywords: [
     "Md Asham Imad",
     "Asham",
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-[#121212] bg-[#F5EFFF] dark:text-[#ffffff] text-[#171717]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-dark bg-light dark:text-[#ffffff] text-[#171717]`}
       >
         <ThemeProvider>
           {children}

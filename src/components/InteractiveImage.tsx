@@ -63,7 +63,13 @@ const InteractiveImage = ({ className }: { className?: string }) => {
         }}
         className="cursor-pointer"
       >
-        <Image src={pic} alt="Profile" className={`rounded-xl ${className}`} />
+        <Image
+          src={pic}
+          alt="Profile"
+          width={400}
+          height={350}
+          className={`rounded-xl ${className}`}
+        />
       </motion.div>
     </div>
   );
