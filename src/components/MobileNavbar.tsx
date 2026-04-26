@@ -75,17 +75,17 @@ const MobileNavbar = () => {
 
       <div
         ref={sidebarRef}
-        className={`fixed z-[9999] top-0 right-0 w-3/5 rounded-lg bg-black/40 backdrop-blur-sm border border-white/20 p-4 shadow-lg z-150 transform transition-transform duration-300 ${
+        className={`fixed z-[9999] top-0 right-0 w-3/5 rounded-lg bg-light/40 dark:bg-dark/40 backdrop-blur-sm border border-black/20 dark:border-white/20 p-4 shadow-lg z-150 transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <ul className="flex flex-col gap-2">
-          <div className="bg-transparent border border-white/20 rounded-lg py-1 space-y-4">
+          <div className="bg-transparent border border-black/20 dark:border-white/20 rounded-lg py-1 space-y-4">
             <li>
               <Link
                 href="/#home"
                 onClick={toggleSidebar}
-                className="hover:bg-black/30 px-4 py-1 rounded-sm hover:text-primary-brand w-full flex gap-1 items-center"
+                className="dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full flex gap-1 items-center"
               >
                 <FaHome size={14} />
                 Home
@@ -96,7 +96,7 @@ const MobileNavbar = () => {
               <Link
                 href="/#about"
                 onClick={toggleSidebar}
-                className="flex gap-1 items-center hover:bg-black/30 px-4 py-1 rounded-sm hover:text-primary-brand w-full"
+                className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
               >
                 <BsInfoCircleFill size={14} />
                 About
@@ -107,7 +107,7 @@ const MobileNavbar = () => {
               <Link
                 href="/#skills"
                 onClick={toggleSidebar}
-                className="flex gap-1 items-center hover:bg-black/30 px-4 py-1 rounded-sm hover:text-primary-brand w-full"
+                className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
               >
                 <SiHyperskill size={14} />
                 Skills
@@ -118,7 +118,7 @@ const MobileNavbar = () => {
               <Link
                 href="/#projects"
                 onClick={toggleSidebar}
-                className="flex gap-1 items-center hover:bg-black/30 px-4 py-1 rounded-sm hover:text-primary-brand w-full"
+                className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
               >
                 <GoProject size={14} />
                 Projects
@@ -129,7 +129,7 @@ const MobileNavbar = () => {
               <Link
                 href="/#education"
                 onClick={toggleSidebar}
-                className="flex gap-1 items-center hover:bg-black/30 px-4 py-1 rounded-sm hover:text-primary-brand w-full"
+                className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
               >
                 <FaGraduationCap size={14} />
                 Education
@@ -139,7 +139,7 @@ const MobileNavbar = () => {
               <Link
                 href="/#contact"
                 onClick={toggleSidebar}
-                className="flex gap-1 items-center hover:bg-black/30 px-4 py-1 rounded-sm hover:text-primary-brand w-full"
+                className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
               >
                 <IoCall size={14} />
                 Contact
