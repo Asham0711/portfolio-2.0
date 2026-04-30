@@ -1,18 +1,33 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { BiMenu } from "react-icons/bi";
 import { FaGraduationCap, FaHome } from "react-icons/fa";
 import { BsInfoCircleFill } from "react-icons/bs";
 import { GoProject } from "react-icons/go";
-import { IoCall, IoMenu, IoMoonSharp, IoSunny } from "react-icons/io5";
-import { useTheme } from "@/context/ThemeContext";
+import { IoCall, IoClose, IoMenu, IoMoonSharp, IoSunny } from "react-icons/io5";
 import { SiHyperskill } from "react-icons/si";
+import { useTheme } from "@/context/ThemeContext";
+import { usePathname } from "next/navigation";
+
+const navItems = [
+  { href: "/", label: "Home", icon: <FaHome size={13} /> },
+  { href: "/about", label: "About", icon: <BsInfoCircleFill size={13} /> },
+  { href: "/skills", label: "Skills", icon: <SiHyperskill size={13} /> },
+  { href: "/projects", label: "Projects", icon: <GoProject size={13} /> },
+  {
+    href: "/education",
+    label: "Education",
+    icon: <FaGraduationCap size={13} />,
+  },
+  { href: "/contact", label: "Contact", icon: <IoCall size={13} /> },
+];
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const { theme, toggleTheme } = useTheme();
+  const pathname = usePathname();
+
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (
@@ -28,125 +43,107 @@ const MobileNavbar = () => {
     } else {
       document.body.style.overflow = "auto";
     }
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.body.style.overflow = "auto";
     };
   }, [isOpen]);
 
-  const toggleSidebar = () => setIsOpen(!isOpen);
+  const toggle = () => setIsOpen((p) => !p);
 
   return (
     <>
-      <div className="fixed top-0 left-0 w-full z-[9999] backdrop-blur-sm bg-transparent flex justify-between items-center py-2 px-4">
-        <div className="py-2 px-6 flex justify-between items-center shadow-md dark:shadow-gray-500 fixed top-0 right-0 left-0 bg-[#F5EFFF] dark:bg-[#121212] z-50">
-          {/* Logo */}
-          <div>
-            <h1 className="text-lg font-bold">
+      <div className="fixed top-0 left-0 right-0 z-[9999] flex justify-center px-4 pt-3">
+        <div className="w-full flex justify-between items-center px-5 py-2.5 rounded-2xl border border-brand-300/20 dark:bg-dark/70 bg-light/70 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
+          <Link href="/" className="flex flex-col leading-tight">
+            <span className="text-[0.95rem] font-extrabold dark:text-white text-black">
               Md <span className="text-brand-300">Asham</span> Imad
-            </h1>
-          </div>
+            </span>
+            <span className="font-mono text-[0.55rem] uppercase tracking-widest text-[#888]">
+              Software Engineer
+            </span>
+          </Link>
 
-          <div className="flex gap-3">
-            {/* Toggle Theme Button */}
-            <button onClick={toggleTheme} className="flex items-center">
+          <div className="flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="h-8 w-8 rounded-xl border border-brand-300/20 dark:bg-white/[0.03] bg-brand-300/[0.06] flex items-center justify-center hover:border-brand-300/50 transition-all duration-250"
+            >
               {theme === "light" ? (
-                <IoMoonSharp className="text-xl text-brand-300" />
+                <IoMoonSharp className="text-base text-brand-300" />
               ) : (
-                <IoSunny className="text-xl text-brand-300" />
+                <IoSunny className="text-base text-brand-300" />
               )}
             </button>
-
-            {/* Hamburger Menu */}
-            <button onClick={toggleSidebar} className="flex items-center">
-              <IoMenu className="text-2xl text-brand-300" />
+            <button
+              onClick={toggle}
+              className="h-8 w-8 rounded-xl border border-brand-300/20 dark:bg-white/[0.03] bg-brand-300/[0.06] flex items-center justify-center hover:border-brand-300/50 transition-all duration-250"
+            >
+              {isOpen ? (
+                <IoClose className="text-base text-brand-300" />
+              ) : (
+                <IoMenu className="text-base text-brand-300" />
+              )}
             </button>
           </div>
         </div>
-        <button className="text-primary-brand text-4xl" onClick={toggleSidebar}>
-          <BiMenu className="text-xl text-brand-300" />
-        </button>
       </div>
-
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-40 z-120"></div>
+        <div
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998]"
+          onClick={() => setIsOpen(false)}
+        />
       )}
 
       <div
         ref={sidebarRef}
-        className={`fixed z-[9999] top-0 right-0 w-3/5 rounded-lg bg-light/40 dark:bg-dark/40 backdrop-blur-sm border border-black/20 dark:border-white/20 p-4 shadow-lg z-150 transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-[72%] max-w-xs z-[9999] dark:bg-dark/90 bg-light/90 backdrop-blur-xl border-l border-brand-300/20 shadow-[-8px_0_40px_rgba(0,0,0,0.15)] transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <ul className="flex flex-col gap-2">
-          <div className="bg-transparent border border-black/20 dark:border-white/20 rounded-lg py-1 space-y-4">
-            <li>
-              <Link
-                href="/"
-                onClick={toggleSidebar}
-                className="dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full flex gap-1 items-center"
-              >
-                <FaHome size={14} />
-                Home
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/about"
-                onClick={toggleSidebar}
-                className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
-              >
-                <BsInfoCircleFill size={14} />
-                About
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/skills"
-                onClick={toggleSidebar}
-                className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
-              >
-                <SiHyperskill size={14} />
-                Skills
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/projects"
-                onClick={toggleSidebar}
-                className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
-              >
-                <GoProject size={14} />
-                Projects
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/education"
-                onClick={toggleSidebar}
-                className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
-              >
-                <FaGraduationCap size={14} />
-                Education
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                onClick={toggleSidebar}
-                className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
-              >
-                <IoCall size={14} />
-                Contact
-              </Link>
-            </li>
+        <div className="flex items-center justify-between px-6 py-5 border-b border-brand-300/10">
+          <div>
+            <p className="font-extrabold dark:text-white text-black text-[0.95rem]">
+              Md <span className="text-brand-300">Asham</span> Imad
+            </p>
+            <p className="font-mono text-[0.58rem] uppercase tracking-widest text-[#888]">
+              Software Engineer
+            </p>
           </div>
-        </ul>
+          <button
+            onClick={toggle}
+            className="h-8 w-8 rounded-xl border border-brand-300/20 flex items-center justify-center hover:border-brand-300/50 hover:bg-brand-300/10 transition-all"
+          >
+            <IoClose className="text-brand-300 text-base" />
+          </button>
+        </div>
+
+        {/* Nav items */}
+        <nav className="flex flex-col gap-1 px-4 pt-4">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={toggle}
+                className={`flex items-center gap-3 px-4 py-3 rounded-xl text-[0.875rem] font-medium transition-all duration-250 ${
+                  isActive
+                    ? "text-brand-300 bg-brand-300/10 border border-brand-300/25"
+                    : "text-[#666] dark:text-[#aaa] hover:text-brand-300 hover:bg-brand-300/5"
+                }`}
+              >
+                <span className={isActive ? "text-brand-300" : ""}>
+                  {item.icon}
+                </span>
+                {item.label}
+                {isActive && (
+                  <span className="ml-auto h-1.5 w-1.5 rounded-full bg-brand-300 shadow-[0_0_6px_#2193b0]" />
+                )}
+              </Link>
+            );
+          })}
+        </nav>
       </div>
     </>
   );

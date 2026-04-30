@@ -1,153 +1,3 @@
-// // import React from 'react';
-// "use client";
-// import Image from "next/image";
-// import pic from "@/assests/Asham_photo.png";
-// import { SiExpress } from "react-icons/si";
-// import { ReactTyped } from "react-typed";
-// import { Spotlight } from "./ui/Spotlight";
-// import {
-//   IconBrandGithub,
-//   IconBrandInstagram,
-//   IconBrandLinkedin,
-//   IconBrandMongodb,
-//   IconBrandNextjs,
-//   IconBrandNodejs,
-//   IconBrandReact,
-//   IconBrandX,
-// } from "@tabler/icons-react";
-// import { FloatingDock } from "./ui/floating-dock";
-// import InteractiveImage from "./InteractiveImage";
-
-// const Home = () => {
-//   const socialLinks = [
-//     {
-//       title: "Twitter",
-//       icon: (
-//         <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-//       ),
-//       href: "https://x.com/asham0711",
-//     },
-//     {
-//       title: "GitHub",
-//       icon: (
-//         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-//       ),
-//       href: "https://github.com/Asham0711",
-//     },
-//     {
-//       title: "LinkedIn",
-//       icon: (
-//         <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-//       ),
-//       href: "https://www.linkedin.com/in/md-asham-imad-926316224/",
-//     },
-//     {
-//       title: "Instagram",
-//       icon: (
-//         <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-//       ),
-//       href: "https://www.instagram.com/__ash._______?utm_source=qr&igsh=bm81ejQwbHR2cXdv",
-//     },
-//   ];
-//   const techLinks = [
-//     {
-//       title: "MongoDB",
-//       icon: (
-//         <IconBrandMongodb className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-//       ),
-//       href: "https://www.mongodb.com/",
-//     },
-//     {
-//       title: "Express JS",
-//       icon: (
-//         <SiExpress className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-//       ),
-//       href: "https://expressjs.com/",
-//     },
-//     {
-//       title: "React JS",
-//       icon: (
-//         <IconBrandReact className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-//       ),
-//       href: "https://react.dev/",
-//     },
-//     {
-//       title: "Node JS",
-//       icon: (
-//         <IconBrandNodejs className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-//       ),
-//       href: "https://nodejs.org/en",
-//     },
-//     {
-//       title: "Next JS",
-//       icon: (
-//         <IconBrandNextjs className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-//       ),
-//       href: "https://nextjs.org/",
-//     },
-//   ];
-//   return (
-//     <>
-//       <div className="max-w-screen-2xl md:min-h-screen container mx-auto px-4 md:px-20 md:my-28 md:mb-0 mb-6">
-//         <Spotlight
-//           className="left-0 md:left-60 md:top-56 top-0 hidden md:block"
-//           fill="#2193b0"
-//         />
-//         <div className="flex flex-col md:flex-row justify-center items-center md:h-[75vh]">
-//           {/* Left Side  */}
-//           <div className="md:w-[65%] mt-12 md:mt-24 space-y-2 order-2 md:order-1">
-//             <span className="text-xl font-bold">Welcome in my feed</span>
-//             <div className="flex text-2xl space-x-2 md:text-4xl">
-//               <h1>Hello I am a</h1>
-//               <ReactTyped
-//                 className="text-brand-300 font-bold"
-//                 strings={["Programmer", "Developer", "Coder"]}
-//                 typeSpeed={40}
-//                 backSpeed={50}
-//                 loop={true}
-//               />
-//             </div>
-//             <p className="text-lg text-justify">
-//               Hello, I am Md Asham Imad, a passionate Full Stack Web developer
-//               with a keen eye for MERN Stack and NextJs. With a background in
-//               IT, I strive to create impactful and visually stunning Software
-//               solutions that leave a lasting impression.
-//             </p>
-//             <br />
-//             {/* Social Media  */}
-//             <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0">
-//               <div className="space-y-2">
-//                 <h1 className="font-bold text-center text-lg">Available on</h1>
-//                 <FloatingDock
-//                   mobileClassName="translate-y-2"
-//                   items={socialLinks}
-//                 />
-//               </div>
-//               <div className=" space-y-2">
-//                 <h1 className="font-bold text-center text-lg">
-//                   Currently working on
-//                 </h1>
-//                 <div className="flex space-x-5">
-//                   <FloatingDock
-//                     mobileClassName="translate-y-20"
-//                     items={techLinks}
-//                   />
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//           {/* Right Side  */}
-//           <div className="md:w-[35%] flex justify-center md:ml-28 mt-20 order-1 bg-transparent">
-//             <InteractiveImage className="md:w-[400px] md:h-[350px]" />
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Home;
-
 "use client";
 import { ReactTyped } from "react-typed";
 import { Spotlight } from "./ui/Spotlight";
@@ -266,7 +116,7 @@ const Home = () => {
                 href="/contact"
                 className="font-mono text-[0.75rem] uppercase tracking-widest text-brand-300 border border-brand-300/30 px-5 py-2.5 rounded-xl hover:bg-brand-300/10 transition-all duration-250 hover:-translate-y-0.5"
               >
-                Hire Me ↗
+                Contact Me
               </Link>
             </div>
 
@@ -292,7 +142,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="md:w-[42%] flex justify-center items-center order-1 md:order-2">
+          <div className="md:w-[42%] md:mt-0 mt-8 flex justify-center items-center order-1 md:order-2">
             <div className="relative">
               <div className="absolute inset-0 rounded-2xl bg-brand-300/10 blur-2xl scale-110 z-0" />
               <div className="relative z-10">
