@@ -102,7 +102,7 @@ export default function Skills() {
     <div className="min-h-[100vh] pt-24 px-6 pb-16 relative overflow-hidden">
       <div className="max-w-[1100px] mx-auto relative z-[50]">
         <div className="text-center mb-10">
-          <h1 className="md:text-6xl text-4xl font-extrabold">
+          <h1 className="md:text-5xl text-4xl font-extrabold">
             <HighlightText text="Skills & Stack" />
           </h1>
           <p className="text-lg text-[#888]">
