@@ -16,10 +16,7 @@ const About = () => {
   };
 
   return (
-    <div
-      id="about"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-20"
-    >
+    <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-20">
       <h1 className="text-4xl text-center font-bold mb-2">
         <HighlightText text="About" />
       </h1>

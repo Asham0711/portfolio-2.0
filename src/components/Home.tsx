@@ -88,15 +88,12 @@ const Home = () => {
   ];
   return (
     <>
-      <div
-        id="home"
-        className="max-w-screen-2xl container mx-auto px-4 md:px-20 md:my-28"
-      >
+      <div className="max-w-screen-2xl min-h-[75vh] container mx-auto px-4 md:px-20 md:my-28">
         <Spotlight
           className="left-0 md:left-60 md:top-56 top-0 hidden md:block"
           fill="#2193b0"
         />
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row justify-center items-center h-[75vh]">
           {/* Left Side  */}
           <div className="md:w-[65%] mt-12 md:mt-24 space-y-2 order-2 md:order-1">
             <span className="text-xl font-bold">Welcome in my feed</span>

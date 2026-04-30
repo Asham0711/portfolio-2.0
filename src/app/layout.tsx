@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { Toaster } from "react-hot-toast";
+import Navbar from "@/components/Navbar";
+import MobileNavbar from "@/components/MobileNavbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +40,14 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-dark bg-light dark:text-[#ffffff] text-[#171717]`}
       >
         <ThemeProvider>
+          <div className="hidden md:block">
+            <Navbar />
+          </div>
+          <div className="block md:hidden">
+            <MobileNavbar />
+          </div>
           {children}
+          <Footer />
           <Toaster />
         </ThemeProvider>
       </body>

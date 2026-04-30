@@ -5,10 +5,7 @@ import { testimonials } from "@/data";
 
 const Projects = () => {
   return (
-    <div
-      id="projects"
-      className="max-w-screen-2xl container mx-auto px-6 md:px-20 my-20"
-    >
+    <div className="max-w-screen-2xl container mx-auto px-6 md:px-20 my-20">
       <h1 className="text-4xl text-center font-bold mb-2">
         <HighlightText text="Projects" />
       </h1>

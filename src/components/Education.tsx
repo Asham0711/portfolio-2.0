@@ -6,10 +6,7 @@ import { Meteors } from "./ui/meteors";
 
 const Education = () => {
   return (
-    <div
-      id="education"
-      className="max-w-screen-2xl container mx-auto px-6 md:px-20 my-20"
-    >
+    <div className="max-w-screen-2xl container mx-auto px-6 md:px-20 my-20">
       <h1 className="text-4xl text-center font-bold mb-2">
         <HighlightText text="Education" />
       </h1>
@@ -32,7 +29,7 @@ const Education = () => {
               <div className="flex gap-16">
                 <p className="flex gap-2 items-center">
                   <FaGraduationCap className="text-brand-300" />
-                  CGPA - 8.72
+                  CGPA - 8.62
                 </p>
                 <p className="flex gap-2 items-center">
                   <SlCalender className="text-brand-300" />

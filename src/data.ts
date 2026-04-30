@@ -6,12 +6,12 @@ import project5 from '@/assests/slip.png'
 import project6 from '@/assests/ashventure.png'
 
 export const navLink = [
-    { title: 'Home', path: '/#home' },
-    { title: 'About', path: '/#about' },
-    { title: 'Skills', path: '/#skills' },
-    { title: 'Projects', path: '/#projects' },
-    { title: 'Education', path: '/#education' },
-    { title: 'Contact', path: '/#contact' },
+    { title: 'Home', path: '/' },
+    { title: 'About', path: '/about' },
+    { title: 'Skills', path: '/skills' },
+    { title: 'Projects', path: '/projects' },
+    { title: 'Education', path: '/education' },
+    { title: 'Contact', path: '/contact' },
 ];
 
 export const testimonials = [

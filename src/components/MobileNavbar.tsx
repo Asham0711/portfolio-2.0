@@ -83,7 +83,7 @@ const MobileNavbar = () => {
           <div className="bg-transparent border border-black/20 dark:border-white/20 rounded-lg py-1 space-y-4">
             <li>
               <Link
-                href="/#home"
+                href="/"
                 onClick={toggleSidebar}
                 className="dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full flex gap-1 items-center"
               >
@@ -94,7 +94,7 @@ const MobileNavbar = () => {
 
             <li>
               <Link
-                href="/#about"
+                href="/about"
                 onClick={toggleSidebar}
                 className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
               >
@@ -105,7 +105,7 @@ const MobileNavbar = () => {
 
             <li>
               <Link
-                href="/#skills"
+                href="/skills"
                 onClick={toggleSidebar}
                 className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
               >
@@ -116,7 +116,7 @@ const MobileNavbar = () => {
 
             <li>
               <Link
-                href="/#projects"
+                href="/projects"
                 onClick={toggleSidebar}
                 className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
               >
@@ -127,7 +127,7 @@ const MobileNavbar = () => {
 
             <li>
               <Link
-                href="/#education"
+                href="/education"
                 onClick={toggleSidebar}
                 className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
               >
@@ -137,7 +137,7 @@ const MobileNavbar = () => {
             </li>
             <li>
               <Link
-                href="/#contact"
+                href="/contact"
                 onClick={toggleSidebar}
                 className="flex gap-1 items-center dark:hover:bg-black/30 hover:bg-light/30 px-4 py-1 rounded-sm hover:text-brand-300 w-full"
               >
