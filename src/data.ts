@@ -18,7 +18,7 @@ export const navLink = [
 export const testimonials = [
     {
       id: "proj-1",
-      quote: "Ash Venture is an AI-driven itinerary planner developed using Next.js, designed to create smart and personalized travel experiences. It leverages the Groq API for dynamic itinerary generation, Cloudinary for efficient media storage, and JWT-based authentication for secure user sessions. The platform also supports third-party image integration and allows users to export their travel plans as downloadable PDFs, all wrapped in a sleek Tailwind CSS interface.",
+      quote: "Ash Venture is an AI-driven itinerary planner developed using Next.js, designed to create smart and personalized travel experiences. It leverages the Groq API for dynamic itinerary generation. The platform also supports third-party image integration and allows users to export their travel plans as downloadable PDFs, all wrapped in a sleek Tailwind CSS interface.",
       name: "Ash Venture",
       designation: "An AI Based Itinerary Planner",
       src: project6,
