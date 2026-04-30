@@ -4,6 +4,7 @@ import project3 from '@/assests/anonymous.png'
 import project4 from '@/assests/music.png'
 import project5 from '@/assests/slip.png'
 import project6 from '@/assests/ashventure.png'
+import { Stats } from './types/skills'
 
 export const navLink = [
     { title: 'Home', path: '/' },
@@ -69,4 +70,12 @@ export const testimonials = [
       liveLink:'https://salary-slip-nexisa.vercel.app/',
       github:'https://github.com/Asham0711/html-to-pdf-generator'
     },
+];
+
+export const stats: Stats[] = [
+  { num: "7+", label: "Languages" },
+  { num: "7+", label: "Frameworks" },
+  { num: "6+", label: "Tools & Platforms" },
+  { num: "4", label: "CS Foundations" },
+  { num: "3+", label: "Years Building" },
 ];
