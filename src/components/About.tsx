@@ -73,7 +73,7 @@ const About = () => {
           {/* Right — Content */}
           <div className="md:w-[58%] flex flex-col gap-6">
             {/* Bio card */}
-            <div className="relative overflow-hidden rounded-2xl border border-brand-300/20 dark:bg-white/[0.02] bg-brand-300/[0.2] p-6">
+            <div className="relative overflow-hidden rounded-2xl border border-brand-300/20 dark:bg-white/[0.02] bg-brand-300/[0.08] p-6">
               {/* top shimmer line */}
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-300/50 to-transparent" />
 
@@ -118,7 +118,7 @@ const About = () => {
               {highlights.map((h, i) => (
                 <div
                   key={i}
-                  className="group flex items-center gap-3 rounded-xl border border-brand-300/15 dark:bg-white/[0.02] bg-brand-300/[0.2] px-4 py-3 transition-all duration-250 hover:border-brand-300/40 hover:shadow-[0_4px_20px_rgba(33,147,176,0.1)] hover:-translate-y-0.5"
+                  className="group flex items-center gap-3 rounded-xl border border-brand-300/15 dark:bg-white/[0.02] bg-brand-300/[0.08] px-4 py-3 transition-all duration-250 hover:border-brand-300/40 hover:shadow-[0_4px_20px_rgba(33,147,176,0.1)] hover:-translate-y-0.5"
                 >
                   <span className="text-lg flex-shrink-0">{h.icon}</span>
                   <div>

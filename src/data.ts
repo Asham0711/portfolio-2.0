@@ -79,3 +79,33 @@ export const stats: Stats[] = [
   { num: "4", label: "CS Foundations" },
   { num: "3+", label: "Years Building" },
 ];
+
+export const educationData = [
+  {
+    degree: "Bachelor of Technology",
+    field: "Information Technology",
+    institution: "Techno International New Town",
+    board: "MAKAUT",
+    score: "CGPA — 8.62",
+    year: "2021 – 2025",
+    tag: "B.Tech",
+  },
+  {
+    degree: "Higher Secondary",
+    field: "Science (12th)",
+    institution: "GR KC Mills High School",
+    board: "WBCHSE",
+    score: "81.40%",
+    year: "2018 – 2020",
+    tag: "XII",
+  },
+  {
+    degree: "Secondary Education",
+    field: "10th Standard",
+    institution: "St. Michaels' Academy",
+    board: "WBBSE",
+    score: "73.57%",
+    year: "2005 – 2018",
+    tag: "X",
+  },
+];

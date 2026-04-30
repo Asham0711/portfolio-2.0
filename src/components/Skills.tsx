@@ -131,7 +131,7 @@ export default function Skills() {
           ))}
         </div>
 
-        <div className="relative overflow-hidden rounded-2xl border border-brand-300/40 dark:bg-brand-300/[0.02] bg-brand-300/[0.2] p-8">
+        <div className="relative overflow-hidden rounded-2xl border border-brand-300/40 dark:bg-brand-300/[0.02] bg-brand-300/[0.08] p-8">
           <div className="mb-6 flex items-center gap-[10px] border-b border-brand-300/40 pb-4">
             <div className="h-[6px] w-[6px] animate-pulse rounded-full bg-brand-300 shadow-[0_0_8px_#2193b0]" />
 

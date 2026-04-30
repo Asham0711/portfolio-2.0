@@ -1,89 +1,124 @@
-import React from "react";
 import { FaGraduationCap, FaSchool } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import HighlightText from "./HighlightText";
-import { Meteors } from "./ui/meteors";
+import { educationData } from "@/data";
 
 const Education = () => {
   return (
-    <div className="max-w-screen-2xl container mx-auto px-6 md:px-20 my-20">
-      <h1 className="text-4xl text-center font-bold mb-2">
-        <HighlightText text="Education" />
-      </h1>
-      <div className="border-2 border-brand-300 w-[5%] mx-auto md:mb-20 mb-10"></div>
-      <div className="flex flex-col items-center max-w-4xl mx-auto py-12 border-2 border-brand-300 md:pl-16 rounded-xl">
-        <div className="relative w-full">
-          {/* Timeline */}
-          <div className="absolute hidden md:block left-1/2 transform -translate-x-1/2 h-64 mt-8 w-[0.25%] bg-brand-300"></div>
+    <div className="min-h-screen pt-24 px-6 pb-16 relative overflow-hidden">
+      <div className="pointer-events-none fixed top-[20%] right-[-5%] w-[500px] h-[500px] rounded-full bg-brand-300/5 blur-[80px] z-0" />
 
-          {/* Item 1 */}
-          <div className="flex items-center justify-start gap-4 mb-12">
-            <div className="md:w-1/2 text-left w-11/12 mx-auto md:mx-0">
-              <h3 className="font-bold text-lg">
-                Bachelor of Technology in Information Technology
-              </h3>
-              <p className="flex gap-2 items-center">
-                <FaSchool className="text-brand-300" />
-                Techno International New Town, MAKAUT
-              </p>
-              <div className="flex gap-16">
-                <p className="flex gap-2 items-center">
-                  <FaGraduationCap className="text-brand-300" />
-                  CGPA - 8.62
-                </p>
-                <p className="flex gap-2 items-center">
-                  <SlCalender className="text-brand-300" />
-                  2021-2025
-                </p>
-              </div>
-            </div>
-            <div className="absolute hidden left-1/2 transform -translate-x-1/2 bg-brand-300 h-5 w-5 rounded-full md:flex md:items-center md:justify-center"></div>
-          </div>
+      <div className="max-w-[1100px] mx-auto relative z-10">
+        <div className="text-center mb-16">
+          <h1 className="md:text-5xl text-4xl font-extrabold">
+            <HighlightText text="Education" />
+          </h1>
+          <p className="text-lg text-[#888] mt-2">
+            The foundation behind the code
+          </p>
+        </div>
 
-          {/* Item 2 */}
-          <div className="flex items-center justify-end gap-4 mb-12">
-            <div className="absolute left-1/2 transform -translate-x-1/2 bg-brand-300 h-5 w-5 rounded-full hidden md:flex items-center justify-center"></div>
-            <div className="md:w-1/2 text-left w-11/12 mx-auto md:mx-0 md:px-8">
-              <h3 className="font-bold text-lg">Higher Secondary (12th)</h3>
-              <p className="flex gap-2 items-center">
-                <FaSchool className="text-brand-300" />
-                GR KC Mills High School, WBCHSE
-              </p>
-              <div className="flex gap-16">
-                <p className="flex gap-2 items-center">
-                  <FaGraduationCap className="text-brand-300" />
-                  Percentage - 81.40%
-                </p>
-                <p className="flex gap-2 items-center">
-                  <SlCalender className="text-brand-300" />
-                  2018-2020
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="relative max-w-3xl mx-auto">
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-brand-300/60 via-brand-300/20 to-transparent md:-translate-x-1/2" />
 
-          {/* Item 3 */}
-          <div className="flex items-center justify-start gap-4 mb-12">
-            <div className="md:w-1/2 text-left w-11/12 mx-auto md:mx-0">
-              <h3 className="font-bold text-lg">Secondary Education (10th)</h3>
-              <p className="flex gap-2 items-center">
-                <FaSchool className="text-brand-300" />
-                St. Michaels&apos; Academy, WBBSE
-              </p>
-              <div className="flex gap-16">
-                <p className="flex gap-2 items-center">
-                  <FaGraduationCap className="text-brand-300" />
-                  Percentage - 73.57%
-                </p>
-                <p className="flex gap-2 items-center">
-                  <SlCalender className="text-brand-300" />
-                  2005-2018
-                </p>
-              </div>
-            </div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 bg-brand-300 h-5 w-5 rounded-full hidden md:flex items-center justify-center"></div>
+          <div className="flex flex-col gap-12">
+            {educationData.map((edu, i) => {
+              const isRight = i % 2 !== 0;
+              return (
+                <div
+                  key={i}
+                  className="relative flex items-start md:items-center gap-6 md:gap-0"
+                >
+                  <div className="flex-shrink-0 md:hidden relative z-10 mt-1">
+                    <div className="h-3 w-3 rounded-full bg-brand-300 shadow-[0_0_8px_#2193b0]" />
+                  </div>
+                  <div
+                    className={`w-full md:flex md:items-center md:gap-0 ${isRight ? "md:flex-row-reverse" : "md:flex-row"}`}
+                  >
+                    <div
+                      className={`w-full md:w-[calc(50%-2.5rem)] group relative overflow-hidden rounded-2xl border border-brand-300/20 dark:bg-white/[0.02] bg-brand-300/[0.08] p-5 transition-all duration-300 hover:border-brand-300/50 hover:shadow-[0_8px_32px_rgba(33,147,176,0.12)] hover:-translate-y-0.5 ${isRight ? "md:ml-auto" : ""}`}
+                    >
+                      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-300/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                      <div className="flex items-start justify-between gap-3 mb-3">
+                        <div>
+                          <span className="font-mono text-[0.65rem] uppercase tracking-[0.15em] text-brand-300">
+                            {edu.degree}
+                          </span>
+                          <h3 className="font-bold text-[1rem] dark:text-white text-black leading-snug mt-0.5">
+                            {edu.field}
+                          </h3>
+                        </div>
+                        <span className="flex-shrink-0 font-mono text-[0.7rem] font-bold px-2.5 py-1 rounded-lg border border-brand-300/30 text-brand-300 bg-brand-300/10">
+                          {edu.tag}
+                        </span>
+                      </div>
+                      <div className="flex flex-col gap-2 mt-3">
+                        <div className="flex items-center gap-2 text-[0.85rem] text-[#555] dark:text-[#bbb]">
+                          <FaSchool className="text-brand-300 flex-shrink-0" />
+                          <span>{edu.institution}</span>
+                          <span className="font-mono text-[0.7rem]  ml-auto flex-shrink-0">
+                            {edu.board}
+                          </span>
+                        </div>
+
+                        <div className="flex items-center gap-4 pt-2 border-t border-brand-300/10">
+                          <span className="flex items-center gap-1.5 text-[0.82rem] font-semibold dark:text-white text-black">
+                            <FaGraduationCap className="text-brand-300" />
+                            {edu.score}
+                          </span>
+                          <span className="flex items-center gap-1.5 text-[0.82rem]  ml-auto font-mono">
+                            <SlCalender className="text-brand-300" />
+                            {edu.year}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="hidden md:flex items-center justify-center w-20 flex-shrink-0 relative z-10">
+                      <div className="h-4 w-4 rounded-full bg-brand-300 shadow-[0_0_10px_#2193b0] ring-4 ring-brand-300/20" />
+                    </div>
+                    <div className="hidden md:block md:w-[calc(50%-2.5rem)]" />
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <Meteors number={20} />
+        </div>
+
+        <div className="mt-16 flex flex-wrap justify-center gap-8 pt-8 border-t border-brand-300/20">
+          <div className="text-center">
+            <div className="font-mono text-[2rem] font-extrabold leading-none text-brand-300">
+              8.62
+            </div>
+            <div className="mt-1 text-[0.75rem] uppercase tracking-[0.12em] ">
+              B.Tech CGPA
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="font-mono text-[2rem] font-extrabold leading-none text-brand-300">
+              81%
+            </div>
+            <div className="mt-1 text-[0.75rem] uppercase tracking-[0.12em] ">
+              Class XII
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="font-mono text-[2rem] font-extrabold leading-none text-brand-300">
+              73%
+            </div>
+            <div className="mt-1 text-[0.75rem] uppercase tracking-[0.12em] ">
+              Class X
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="font-mono text-[2rem] font-extrabold leading-none text-brand-300">
+              17+
+            </div>
+            <div className="mt-1 text-[0.75rem] uppercase tracking-[0.12em] ">
+              Years Studying
+            </div>
+          </div>
         </div>
       </div>
     </div>
